@@ -1,0 +1,316 @@
+/* 设置首页-欢迎界面 */
+/* 顶部导航栏部分 */
+.one {
+    z-index: 9999;
+    height: 50px;
+    width: 1000px;
+    background-image: linear-gradient(to right,#9c9b9b, #afafaf, #9c9b9b);
+
+    line-height: 50px;
+    margin: 50px auto;
+    display: flex;
+
+    position: sticky;
+    top: 0px;
+}
+
+.one li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+#mo{
+    width: 50px;
+    height: 50px;
+    /* border: 1px black solid; */
+    border-radius: 50%;
+    margin: auto;
+    font: 50px/0.9 隶书;
+}
+
+.contact span{
+    font-size: 13px;
+}
+
+.contact img{
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.contact{
+    z-index: 9999;
+    height: 0px;
+    overflow: hidden;
+    transition: 1s;
+    line-height: 1;
+    text-align: center;
+}
+
+li:hover>.cont .contact{
+    display: block;
+    height: 260px;
+    z-index: 9999;
+}
+
+a:hover {
+    background-color: rgb(86, 86, 86);
+    color: white;
+}
+
+/* 中部文字部分 */
+.home .box1 {
+    width: 500px;
+    /* background-color: aqua; */
+    margin: 0 auto;
+}
+
+.home span {
+    display: block;
+}
+
+.home .pan1,
+.pan2 {
+    font-size: 60px;
+}
+
+.home .pan1 {
+    transform: translateX(-25%);
+}
+
+.home .pan2 {
+    transform: translateX(25%);
+}
+
+.home .pan3 {
+    font-size: 20px;
+    /* transform: translateX(7%); */
+    margin: 10px auto;
+}
+
+/* 小怪兽部分 */
+.home .dm {
+    width: 1200px;
+    height: 300px;
+    /* border: 1px black solid; */
+    margin: 30px auto;
+
+    overflow: hidden;
+}
+
+.home .bg {
+    width: 1200px;
+    height: 300px;
+    background-image: url(../xgs/bg3.png);
+    /* background-repeat: repeat-x; */
+
+    position: relative;
+    animation: yan 15s infinite linear;
+}
+
+.home .xgs {
+    width: 120px;
+    height: 110px;
+    background-image: url(../xgs/xgs.png);
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 170px;
+    left: 200px;
+
+    animation: xgs 1.5s steps(8) infinite;
+}
+
+/* 设置小怪兽和背景动画 */
+@keyframes xgs {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -1015px 0;
+    }
+}
+
+@keyframes yan {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -3000px 0;
+    }
+}
+
+
+/* 个人介绍界面 */
+/* 关于我 */
+/* 内容块 */
+.my .content {
+    width: 800px;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* 图片 */
+.my .img1 {
+    border: 10px black solid;
+    width: 150px;
+    margin: 0 10% 0 15%;
+}
+
+/* 介绍 */
+.my .hello p {
+    text-align: left;
+    font-size: 20px;
+    margin: 0px 0px;
+}
+
+/* 笔记 */
+.skills {
+    width: 800px;
+    height: 450px;
+    margin: 30px auto;
+    display: flex;
+    /* border: 1px black solid; */
+}
+
+.skills .fd{
+    width: 700px;
+    margin: 10px auto;
+    /* border: 1px black solid; */
+}
+
+.skills .ski a{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 20px;
+    margin: 30px 60px;
+    border: 5px rgb(128, 128, 128) solid;
+    border-radius: 50%;
+
+    float: left;
+}
+
+.ski:hover>a{
+    box-shadow: 0px 0px 15px black;
+}
+
+/* 经历界面 */
+/* 内容框 */
+/* exp外框 */
+.exp {
+    width: 800px;
+    height: 600px;
+    margin: 0px auto;
+    position: relative;
+}
+/* 中线 */
+.xian {
+    width: 3px;
+    height: 600px;
+    background-color: black;
+    float: left;
+    position: absolute;
+    top: -100px;
+    left: 398px;
+}
+/* 中线点 */
+.dian {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 100px auto;
+}
+
+.exp .card {
+    width: 300px;
+    height: 100px;
+    /* border: 1px black solid; */
+    cursor: pointer;
+    transition: 3s;
+
+    /* 添加3D效果 */
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
+
+.back {
+    margin-top: -15px;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.exp1 {
+    float: left;
+    position: absolute;
+    top: -10px;
+}
+
+.exp2 {
+    float: left;
+    position: absolute;
+    top: 240px;
+}
+
+.exp3 {
+    float: left;
+    position: absolute;
+    top: 120px;
+    left: 480px;
+}
+
+.exp4 {
+    float: left;
+    position: absolute;
+    top: 370px;
+    left: 480px;
+}
+
+
+/* 作品 */
+.works {
+    width: 1200px;
+    height: 750px;
+    margin: 0 auto;
+}
+
+.collection{
+    width: 1000px;
+    height: 450px;
+    margin: auto;
+}
+
+.collection div{
+    width: 200px;
+    height: 300px;
+    line-height: 100px;
+    font-size: 20px;
+    margin: 50px 60px;
+    border: 5px rgb(128, 128, 128) solid;
+    overflow: hidden;
+    float: left;
+}
+
+.collection img{
+    width: 200px;
+    height: 300px;
+}

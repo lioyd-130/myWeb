@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        * {
+            margin: 30px;
+        }
+
+        #m {
+            width: 200px;
+            /* border: 1px black solid; */
+            float: right;
+
+            position: sticky;
+            top: 100px;
+        }
+
+        #mo {
+            /* width: 50px; */
+            /* height: 50px; */
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+
+            font: 50px 隶书;
+            text-decoration: none;
+        }
+
+        #mol {
+            z-index: 9999;
+            height: 0px;
+            /* border: 1px black solid; */
+            margin: 10px;
+            overflow: hidden;
+            transition: 1s;
+            text-align: center;
+        }
+
+        #mol a {
+            float: left;
+            margin: 10px auto;
+        }
+
+        #mo:hover {
+            background-color: rgb(53, 53, 53);
+        }
+
+        #m:hover>#mol {
+            display: block;
+            height: 500px;
+            z-index: 9999;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="m">
+        <a id="mo" href="../index.html">墨
+            <div id="mol">
+                <a href="#brief">1、HTML简介</a>
+                <a href="#element">2、HTML的标签及元素</a>
+                <a href="#att">3、标签的属性</a>
+                <a href="#tab">4、常用标签</a>
+                <a href="#annot">5、html注释和转义字符</a>
+                <a style="margin-right: 50px;" href="#list">6、列表</a>
+                <a style="margin-right: 50px;" href="#lj">7、超链接</a>
+                <a href="#imgs">8、图片标签</a>
+                <a href="#audio">9、音频和视频</a>
+                <a href="#iframe">10、内联框架</a>
+            </div>
+        </a>
+    </div>
+
+    <H1 id="brief">1、HTML简介</H1>
+    <p>
+        HTML不是一种编程语言，而是一种标记语言，标记语言是一套标记标签，HTML使用标记标签来描述网页<br>
+        称为超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言<br>
+        HTML文件的后缀名为html和htm两种，例如：xxx.html，xxx.htm<br>
+    </p>
+    <img style="height: 450px;" src="img/jiegou.jpg" alt="html结构">
+    <p style="line-height: 2;">
+        如图，为HTML的结构图<br>
+        !DOCTYPE html> 声明为 HTML5 文档<br>
+        html> 元素是 HTML 页面的根元素<br>
+        head> 元素包含了文档的元（meta）数据，如:meta charset="utf-8">定义网页编码格式为utf-8<br>
+        title> 元素描述了文档的标题<br>
+        body> 元素包含了可见的页面内容<br>
+    </p>
+    <br>
+
+
+    <h1 id="element">2、HTML的标签及元素</h1>
+    <p>
+        HTML标签是由尖括号包围的关键词，标签通常是成对出现的<br>
+        以尖括号关键字开头，又以尖括号斜杠关键字结束<br>
+        比如：&lt html &gt 和 &lt /html &gt，这就是一个标签对<br>
+        <br>
+        在标签对中的第一个标签是开始标签，第二个带有/的标签是结束标签<br>
+        开始和结束标签也被称为开放标签和闭合标签<br>
+        <br>
+        HTML的“标签”和"元素" 通常都是描述同样的意思.<br>
+        严格来讲, 一个 HTML 元素包含了开始标签与结束标签<br>
+        比如：&lt 开始标签 &gt 内容 &lt /结束标签 &gt，&ltp&gtP是段落标签&lt/p&gt<br>
+        <br>
+        当然，有成双成对的，肯定也有单身的，比如刚才图中的&lt meta charset="UTF-8" &gt<br>
+        像这样只有一个的，称为自结束标签
+    </p>
+    <br>
+
+
+    <h1 id="att">3、标签的属性</h1>
+    <p>
+        在标签中可以设置标签的属性，只能在开始标签，或者自结束标签中设置<br>
+        不能在结束标签中设置标签属性，属性是一个名值对结构，属性名 = 属性值;<br>
+        例如：&lt font color="red" ;&gt <font color="red" ;>这是红色 </font> &lt /font &gt<br>
+        在font的开始标签中，font意为字体，color表示颜色，red为红色<br>
+        因为color = "red";所以“这是红色的”这句话的颜色是红色<br>
+        <br>
+        属性是用来设置标签的内容显示，属性名或者其他的属性需要用空格隔开<br>
+        属性值不是乱写的，有些属性有属性值，有些属性没有<br>
+        <br>
+        标签的ID属性，及class属性<br>
+        ID属性：是元素的唯一标识，类似于身份证的存在<br>
+        通过id属性值，找到页面中带有这个id属性的标签<br>
+        每一个标签都可以加ID属性，但是不能重复<br>
+        ID属性可配合CSS选择器设置样式，也可配合JavaScript使用<br>
+        class属性：定义了元素的类名，可以理解为一个标识，用来标识特定的标签<br>
+        通过class属性，也可以找到页面中带有这个属性的标签，可配合CSS选择器设置样式<br>
+    </p>
+    <br>
+
+
+    <h1 id="tab">4、常用标签</h1>
+    <p>
+        p：p为段落标签<br>
+        H：H是一个标题标签，有6个等级，1为最大，6为最小<br>
+        <img src="img/h.jpg" alt="h1">
+    <h1>这是h1</h1>
+    <h2>这是h2</h2>
+    <h3>这是h3</h3>
+    <h4>这是h4</h4>
+    <h5>这是h5</h5>
+    <h6>这是h6</h6>
+    </p>
+
+    <p>span：行内标签，多个span标签，会显示在同一行<br></p>
+    <img src="img/span.jpg" alt="span"><br>
+    <span style="background-color: rgb(0, 251, 255);">这是span1</span>
+    <span style="background-color: rgb(0, 157, 255);">这是span2</span>
+
+    <p>div：块标签，在页面中会独占一整块，或一整行，多个div标签会分开显示</p>
+    <div style="background-color: rgb(255, 0, 0);">这是div1</div>
+    <div style="background-color: rgb(4, 255, 0);">这是div2</div>
+    <br>
+
+
+    <h1 id="annot">5、html的注释和常用转义字符</h1>
+    <p>
+        html中的注释：&lt !-- 注释的内容不会显示出来 -- &gt<br>
+        常用转义字符：<br>
+        & nbsp：空格<br>
+        & gt：大于号<br>
+        & lt：小于号<br>
+    </p>
+    <br>
+
+
+    <h1 id="list">6、列表</h1>
+    <p>
+        html中可以创建列表，html的列表一共有三种<br>
+        列表之间可以互相嵌套<br>
+        1、有序列表<br>
+        2、无序列表<br>
+        3、定义列表<br>
+        <br>
+        有序列表：使用ol标签创建<br>
+        无序列表：使用ul标签创建<br>
+        有序与无序，均可使用li表示列表项<br>
+        <img src="img/lb.jpg" alt="lb">
+    </p>
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>thrss</li>
+    </ol>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+
+    <p>
+        定义列表：使用dl标签来创建定义列表<br>
+        使用dt表示定义内容，dd表示对内容的解释说明<br>
+        <img src="img/dylb.jpg" alt="lb">
+    </p>
+
+    <dl>
+        <dt>dt:定义内容</dt>
+        <dd>dd:表示对内容的解释说明</dd>
+    </dl>
+    <br>
+
+
+    <h1 id="lj">7、超链接</h1>
+    <p>
+        超链接可以让我们从一个页面跳转到另一个页面<br>
+        或者是当前页面的其他位置<br>
+        <br>
+        使用 a 标签来定义超链接，超链接是一个行内元素<br>
+        在 a 标签中可以嵌套除只身以为的任何元素<br>
+        比如：div、img、span等<br>
+        <img src="img/a.jpg" alt="a">
+        <a href="JavaScript:;">
+            <div>
+                这是超链接中的div
+            </div>
+            <span>这是超链接中的span</span>
+        </a>
+        <br>
+        <br>
+    </p>
+    <p>
+        超链接的属性：href=""，指定跳转到目标路径<br>
+        比如：href="https://www.baidu.com/"<br>
+        可以直接跳转到百度页面<br>
+        <br>
+        超链接中的target属性可以用来指定超链接打开的位置，可选值有<br>
+        _self：默认值，在当前页面中打开<br>
+        _blank：在新页面中打开<br>
+        比如：&lt a href="/my website/index.html" target="_blank" > <a href="../index.html"
+            target="_blank">回首页</a>
+        &lt /a ><br>
+        点击之后会保持原有界面，并打开一个新的界面<br>
+        <br>
+        也可以直接将超链接的href属性设置为#号<br>
+        这样点击超链接以后页面不会发生跳转，而是回到当前页面的顶端<br>
+        还可以使用JavaScript:;作为href的属性，此时点击不会有任何反应<br>
+        可以做到一个占位效果，后续有需要时在具体设置<br>
+        <br>
+        也可以跳转到页面指定位置，只需要将href属性设置为目标元素的ID<br>
+        比如：<a href="#lj">超链接</a><br>
+        <img src="img/as.jpg" alt="as"><br>
+        ID属性是唯一的，不能重复<br>
+        每一个标签都可以加ID属性<br>
+        ID属性就是元素的唯一标识，同一个页面中不能出现重复的ID属性<br>
+        <br>
+    </p>
+    <br>
+
+
+    <h1 id="imgs">8、图片标签</h1>
+    <p>
+        图片标签可以向当前页面插入外部图片<br>
+        图片标签即img标签，使用img标签来插入，img是一个自结束标签<br>
+        img标签元素属于替换元素，基于块和行内元素之间，具有两种元素的特点<br>
+        替换元素：指使用的内容不是自己本身的内容，而是使用引用的内容，根据元素的标签和属性，来决定元素的具体显示内容。<br>
+        <br>
+        属性：src属性指定的是外部图片的路径<br>
+        alt：是图片的描述，一般情况不显示，在图片加载失败时显示<br>
+        比如：&lt img src="图片所在路径" alt="描述" ><br>
+        <img style="width: 150px;" src="img/html.jpg" alt="html"><br>
+        搜索引擎会根据alt中的内容来识别图片，如果不写alt属性，图片则不会被搜索到<br>
+        <br>
+        可使用width和helght来修改宽高<br>
+        width：宽度（单位是px，像素）<br>
+        helght：高度（单位px）<br>
+        高度和宽度，如果只修改了一个，另一个会等比缩放<br>
+        <br>
+        注：一般在pc端，不建议修改图片的大小，需要多大就弄多大<br>
+        在移动端，需要对图片进行缩放<br>
+    </p>
+    <br>
+
+
+    <h1 id="audio">9、音频和视频</h1>
+    <p>
+        音频<br>
+        audio标签用来向页面导入音频文件<br>
+        音频文件引入时，默认是不允许操作播放<br>
+        可使用控制属性来操作：<br>
+        1、controls：是否允许用户操作播放<br>
+        2、autoplay：音频是否自动播放<br>
+        3、loop：音乐是否循环播放<br>
+        <br>
+        如果设置了autoplay则打开页面的同时，音乐会自动播放<br>
+        但是目前大部分浏览器都不会自动播放音乐<br>
+        <br>
+        比如：&lt audio src="文件路径" controls loop> &lt /audio><br>
+        <audio src="img/BeAsOne.mp3" controls loop></audio>
+        <!--方法一-->
+        <br>
+        <br>
+        除了src可以指定外部文件以外，还可以使用source来指定文件<br>
+        比如：<br>
+        &lt audio controls><br>
+        &nbsp &nbsp &nbsp &ltsource src="文件路径"><br>
+        &lt /audio><br>
+        <audio controls>
+            <source src="img/BeAsOne.mp3">
+        </audio>
+        <!--方法二-->
+        <br>
+        <br>
+        在老版本的浏览器，不支持以上用法<br>
+        但可以使用embed标签来引用音乐视频在老版本的浏览器中使用<br>
+        用法：&lt embed src="文件路径" type=""><br>
+        <!--方法三，老标签embed-->
+        <br>
+        视频<br>
+        视频与音频用法类似<br>
+        视频的标签为：video<br>
+        <video controls src="img/ButterFly.mkv"></video>
+    </p>
+    <br>
+
+    <h1 id="iframe">10、内联框架</h1>
+    <p>
+        内联框架的标签为iframe<br>
+        用于向当前页面展示其他页面<br>
+        src：指定要展示的网页<br>
+        frameborder：指定内联框架的边框<br>
+        0表示无边框<br>
+        1表示有边框<br>
+        比如：&lt iframe src="页面链接或者路径" width="500" height="300" frameborder="1"> &lt /iframe><br>
+        <iframe src="../index.html" width="100%" height="300" frameborder="1"></iframe>
+    </p>
+    <br>
+
+    <a href="#" style="float: right;"> ↑ 回顶端</a>
+</body>
+
+</html>
